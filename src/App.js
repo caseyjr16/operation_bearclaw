@@ -34,17 +34,20 @@ handleSubmit(event) {
     return (
       <div className="App">
         <header className="App-header">
+
+        <h1>Hello, {this.state.firstname} {this.state.lastname}</h1>
          <form onSubmit={this.handleSubmit}>
          <label>
            First Name:
            <input type="text" value={this.state.firstname} 
            onChange={this.handleChange} />
            </label>
-           
+           <br></br>
            <label>
            Last Name: 
            <input type="text" value={this.state.lastname} onChange={this.handleChange2} />
            </label>
+           <br></br>
            <input type="submit" value="Submit" /> 
            </form>
 
