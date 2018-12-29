@@ -1,60 +1,34 @@
 import React, { Component } from 'react';
 import './App.css';
-
-
+import Home from './Home Pages/Home';
+import SignIn from './Home Pages/SignIn';
+import SignUp from './Home Pages/SignUp';
+import {BrowserRouter, Route} from 'react-router-dom';
 
 class App extends Component {
-
-constructor(props){
-
-  super(props);
-  this.state = {firstname: '',
-lastname: ''};
-
-this.handleChange = this.handleChange.bind(this);
-this.handleChange2 = this.handleChange2.bind(this);
-this.handleSubmit = this.handleSubmit.bind(this);
-}
-
-handleChange(event){
-  this.setState({firstname: event.target.value})
-
-}
-
-handleChange2(event){
-  this.setState({lastname: event.target.value})
-  
-}
-
-handleSubmit(event) {
-  alert('A name was sumbitted:' + this.state.firstname + " " + this.state.lastname);
-  event.preventDefault();
-}
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-
-        <h1>Hello, {this.state.firstname} {this.state.lastname}</h1>
-         <form onSubmit={this.handleSubmit}>
-         <label>
-           First Name:
-           <input type="text" value={this.state.firstname} 
-           onChange={this.handleChange} />
-           </label>
-           <br></br>
-           <label>
-           Last Name: 
-           <input type="text" value={this.state.lastname} onChange={this.handleChange2} />
-           </label>
-           <br></br>
-           <input type="submit" value="Submit" /> 
-           </form>
-
-        </header>
-      </div>
-    ); 
+    render() {
+      return (
+        <BrowserRouter>
+          <div>
+            <Route exact={true} path='/' render={() => (
+              <div className="App">
+                <Home />
+              </div>
+            )}/>
+            <Route exact={true} path='/signin' render={() => (
+              <div className="App">
+                <SignIn />
+              </div>
+            )}/>
+            <Route exact={true} path='/signup' render={() => (
+              <div className="App">
+                <SignUp />
+              </div>
+            )}/>
+          </div>
+        </BrowserRouter>
+      );
+    }
   }
-}
 
 export default App;

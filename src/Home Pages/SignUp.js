@@ -1,19 +1,18 @@
 import React, {Component} from 'react';
-import './App.css';
 
 
 //this is the signUp page for users 
 
 //initializing user's credentials 
-class SignUp extends Component{
+export default class SignUp extends Component{
     constructor(props){
 
         super(props)
         this.state = {
-            firstName = '',
-            lastName = '', 
-            email = '',
-            username = '',
+            firstName: '',
+            lastName: '', 
+            email: '',
+            username: '',
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
