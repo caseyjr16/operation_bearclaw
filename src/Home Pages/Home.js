@@ -45,8 +45,8 @@ export default class Home extends Component{
             <header className="App-header">
 
             <h1>Welcome!</h1>
-            <Button class="button" variant="contained" title="Sign In" onClick={this.jumpToSignIn} >Sign Up</Button>
-            <Button class="button" variant="contained" title="Sign Up" onClick={this.jumpToSignUp} >Sign In</Button>
+            <Button class="button" variant="outlined" title="Sign In" onClick={this.jumpToSignIn} >Sign In</Button>
+            <Button class="button" variant="outlined" title="Sign Up" onClick={this.jumpToSignUp} >Sign Up</Button>
             </header>
             </div>
 
