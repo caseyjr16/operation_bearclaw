@@ -7,23 +7,31 @@ export default class SignIn extends Component{
 
         super(props)
         this.state = {
-            firstName: '',
-            lastName: '', 
-            email: '',
+            password: '',
             username: '',
         }
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handlePasswordChange = this.handlePasswordChange.bind(this);
+        this.handleUserChange = this.handleUserChange.bind(this);
     }
+    handleUserChange(event){
+        this.setState({username: event.target.value});
+    }
+
+    handlePasswordChange(event){
+        this.setState({password: event.target.value});
+    }
+
 //gathering data from information in textfields
     handleSubmit(event){
-        event.preventDefualt()
+ 
         var data = {
-            firstName: this.state.firstName,
-            lastName: this.state.lastName,
-            email: this.state.email,
+            password: this.state.password,
             username: this.state.username
         }
-        console.log(data)
+        
+        console.log(data);
+        event.preventDefault();
     }
     
 
@@ -34,8 +42,10 @@ export default class SignIn extends Component{
 
             <h1>Sign In!</h1>
             <label>
-                <input type="text" placeholder="First Name" />
+                <input type="text" value={this.state.username} onChange={this.handleUserChange} placeholder="UserName" />
+                <input type="text" value={this.state.password} onChange={this.handlePasswordChange} placeholder="Password" />
             </label>
+            <button onClick={this.handleSubmit}></button>
             </header>
             </div>
 
