@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import './homepagescss/home.css'
 
 //this is the signUp page for users 
 
@@ -64,7 +64,7 @@ export default class SignUp extends Component{
                 <br></br>
                 <input type="text" value={this.state.email} onChange={this.handleEmailChange} placeholder="email" />
                 <br></br>
-                <button onClick={this.handleSubmit}></button>
+                <button onClick={this.handleSubmit}>Submit!</button>
             </label>
             </header>
             </div>

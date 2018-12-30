@@ -2,6 +2,7 @@
 import React, {Component} from 'react';
 import {NavLink} from 'react-dom';
 import { Route, Redirect } from 'react-router';
+import './homepagescss/home.css'
 
 export default class Home extends Component{
 
