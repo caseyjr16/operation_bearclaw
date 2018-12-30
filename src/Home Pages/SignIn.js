@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import './homepagescss/home.css'
 
 
 export default class SignIn extends Component{
@@ -47,7 +47,7 @@ export default class SignIn extends Component{
                 <input type="text" value={this.state.password} onChange={this.handlePasswordChange} placeholder="Password" />
                 <br></br>
             </label>
-            <button onClick={this.handleSubmit}></button>
+            <button onClick={this.handleSubmit}>Submit!</button>
             </header>
             </div>
 
