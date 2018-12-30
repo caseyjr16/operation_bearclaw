@@ -41,17 +41,12 @@ export default class Home extends Component{
     
 
         return(
-            <div className="App">
+            <div className="App"  class="background">
             <header className="App-header">
 
             <h1>Welcome!</h1>
-<<<<<<< HEAD
             <Button class="button" variant="contained" title="Sign In" onClick={this.jumpToSignIn} >Sign Up</Button>
             <Button class="button" variant="contained" title="Sign Up" onClick={this.jumpToSignUp} >Sign In</Button>
-=======
-            <button title="Sign In" onClick={this.jumpToSignIn} >Sign In</button>
-            <button title="Sign Up" onClick={this.jumpToSignUp} >Sign Up</button>
->>>>>>> 82b66316437e5a2390cefa5928caf7b08f3a2b13
             </header>
             </div>
 

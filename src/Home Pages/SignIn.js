@@ -37,7 +37,7 @@ export default class SignIn extends Component{
                        
     render(){
         return(
-            <div className="App">
+            <div className="App"  class="background">
             <header className="App-header">
 
             <h1>Sign In!</h1>

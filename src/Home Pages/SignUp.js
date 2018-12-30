@@ -51,7 +51,7 @@ export default class SignUp extends Component{
 
     render(){
         return(
-            <div className="App">
+            <div className="App"  class="background">
             <header className="App-header">
 
             <h1>Sign Up!</h1>
@@ -65,12 +65,7 @@ export default class SignUp extends Component{
                 <input type="password" value={this.state.password} onChange={this.handlePasswordChange} placeholder="Password" />
                 <br></br>
                 
-<<<<<<< HEAD
                 <Button class="button" variant="contained" onClick={this.handleSubmit}>Sign Up!</Button>
-=======
-                
-                <button onClick={this.handleSubmit}>Submit!</button>
->>>>>>> 82b66316437e5a2390cefa5928caf7b08f3a2b13
             </label>
             </header>
             </div>
