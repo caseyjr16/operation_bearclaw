@@ -29,6 +29,7 @@ class App extends Component {
                 <SignUp />
               </div>
             )}/>
+            
           </div>
         </BrowserRouter>
       );
