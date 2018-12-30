@@ -28,13 +28,13 @@ export default class Home extends Component{
             <header className="App-header">
 
             <h1>Welcome!</h1>
-            <toolbar>
-        <Link to="/signin">Sign In</Link>
-            <button href="">Sign Up</button> 
-            </toolbar>
+            <button title="Sign In" onPress={() => this.props.navigation.push('Signin')} />
             </header>
             </div>
 
         );
     }
+
+    
+    
 }
