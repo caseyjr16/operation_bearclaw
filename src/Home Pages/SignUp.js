@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import './homepagescss/home.css'
-
+import Button from '@material-ui/core/Button';
+import './homepagescss/home.css';
 //this is the signUp page for users 
 
 //initializing user's credentials 
@@ -64,12 +64,8 @@ export default class SignUp extends Component{
                 <br></br>
                 <input type="password" value={this.state.password} onChange={this.handlePasswordChange} placeholder="Password" />
                 <br></br>
-<<<<<<< HEAD
                 
-                <button onClick={this.handleSubmit}>Sign Up!</button>
-=======
-                <button onClick={this.handleSubmit}>Submit!</button>
->>>>>>> 417429befe924fa20a79c99ea4218874e289e4b7
+                <Button class="button" variant="contained" onClick={this.handleSubmit}>Sign Up!</Button>
             </label>
             </header>
             </div>
