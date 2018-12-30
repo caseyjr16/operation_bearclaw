@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import './homepagescss/home.css'
-
+import Button from '@material-ui/core/Button';
+import './homepagescss/home.css';
 
 export default class SignIn extends Component{
     constructor(props){
@@ -37,7 +37,7 @@ export default class SignIn extends Component{
                        
     render(){
         return(
-            <div className="App">
+            <div className="App"  class="background">
             <header className="App-header">
 
             <h1>Sign In!</h1>
@@ -47,7 +47,7 @@ export default class SignIn extends Component{
                 <input type="text" value={this.state.password} onChange={this.handlePasswordChange} placeholder="Password" />
                 <br></br>
             </label>
-            <button onClick={this.handleSubmit}>Submit!</button>
+            <Button class="button" variant="contained" onClick={this.handleSubmit}>Submit!</Button>
             </header>
             </div>
 

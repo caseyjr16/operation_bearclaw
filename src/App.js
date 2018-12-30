@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
-import './App.css';
 import Home from './Home Pages/Home';
 import SignIn from './Home Pages/SignIn';
 import SignUp from './Home Pages/SignUp';
 import {BrowserRouter, Route} from 'react-router-dom';
+import './Home Pages/homepagescss/home.css';
 
 
 class App extends Component {
     render() {
       return (
+
+        
+
         <BrowserRouter>
           <div>
             <Route exact={true} path='/' render={() => (

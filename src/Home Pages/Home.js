@@ -2,7 +2,8 @@
 import React, {Component} from 'react';
 import {NavLink} from 'react-dom';
 import { Route, Redirect } from 'react-router';
-
+import Button from '@material-ui/core/Button';
+import './homepagescss/home.css';
 
 export default class Home extends Component{
 
@@ -40,12 +41,12 @@ export default class Home extends Component{
     
 
         return(
-            <div className="App">
+            <div className="App"  class="background">
             <header className="App-header">
 
             <h1>Welcome!</h1>
-            <button title="Sign In" onClick={this.jumpToSignIn} >Sign In</button>
-            <button title="Sign Up" onClick={this.jumpToSignUp} >Sign Up</button>
+            <Button class="button" variant="contained" title="Sign In" onClick={this.jumpToSignIn} >Sign Up</Button>
+            <Button class="button" variant="contained" title="Sign Up" onClick={this.jumpToSignUp} >Sign In</Button>
             </header>
             </div>
 
