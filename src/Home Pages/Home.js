@@ -1,6 +1,6 @@
 
 import React, {Component} from 'react';
-
+import {NavLink} from 'react-dom';
 
 export default class Home extends Component{
     constructor(props){
@@ -27,7 +27,11 @@ export default class Home extends Component{
             <div className="App">
             <header className="App-header">
 
-            <h1>Home!!</h1>
+            <h1>Welcome!</h1>
+            <toolbar>
+        <Link to="/signin">Sign In</Link>
+            <button href="">Sign Up</button> 
+            </toolbar>
             </header>
             </div>
 

@@ -37,6 +37,10 @@ export default class SignUp extends Component{
             <h1>Sign Up!</h1>
             <label>
                 <input type="text" placeholder="First Name" />
+                <input type="text" placeholder="Last Name" />
+                <input type="password" placeholder="Password" />
+                <input type="text" placeholder="email" />
+                <select></select> 
             </label>
             </header>
             </div>
