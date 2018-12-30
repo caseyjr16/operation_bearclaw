@@ -60,11 +60,12 @@ export default class SignUp extends Component{
                 <br></br>
                 <input type="text" value={this.state.lastName} onChange={this.handleLastChange} placeholder="Last Name" />
                 <br></br>
+                <input type="email" value={this.state.email} onChange={this.handleEmailChange} placeholder="email" />
+                <br></br>
                 <input type="password" value={this.state.password} onChange={this.handlePasswordChange} placeholder="Password" />
                 <br></br>
-                <input type="text" value={this.state.email} onChange={this.handleEmailChange} placeholder="email" />
-                <br></br>
-                <button onClick={this.handleSubmit}></button>
+                
+                <button onClick={this.handleSubmit}>Sign Up!</button>
             </label>
             </header>
             </div>
