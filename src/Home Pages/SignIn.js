@@ -34,7 +34,7 @@ export default class SignIn extends Component{
         event.preventDefault();
     }
     
-
+                       
     render(){
         return(
             <div className="App">
@@ -43,7 +43,9 @@ export default class SignIn extends Component{
             <h1>Sign In!</h1>
             <label>
                 <input type="text" value={this.state.username} onChange={this.handleUserChange} placeholder="UserName" />
+                <br></br>
                 <input type="text" value={this.state.password} onChange={this.handlePasswordChange} placeholder="Password" />
+                <br></br>
             </label>
             <button onClick={this.handleSubmit}></button>
             </header>
