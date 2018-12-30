@@ -10,29 +10,41 @@ export default class Home extends Component{
 
         super(props)
         this.state = {
-            redirect: false
+            redirect1: false,
+            redirect2: false
         }
 
         this.jumpToSignIn = this.jumpToSignIn.bind(this)
+        this.jumpToSignUp = this.jumpToSignUp.bind(this)
     }
 
     jumpToSignIn(event){
-        this.setState({redirect: true});
+        this.setState({redirect1: true});
     }
 
+    jumpToSignUp(event){
+        this.setState({redirect2: true});
+    }
     render(){
 
-        if(this.state.redirect === true){
+        if(this.state.redirect1 === true ){
             return <Redirect to='/signIn'/>
+            
         }
+        
+    
+        if(this.state.redirect2 === true){
+            return <Redirect to='/signUp'/>
+        }
+    
 
         return(
             <div className="App">
             <header className="App-header">
 
             <h1>Welcome!</h1>
-            <button title="Sign In" onClick={this.jumpToSignIn} />
-            
+            <button title="Sign In" onClick={this.jumpToSignIn} >Sign Up</button>
+            <button title="Sign Up" onClick={this.jumpToSignUp} >Sign In</button>
             </header>
             </div>
 
