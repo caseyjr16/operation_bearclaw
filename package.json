@@ -9,6 +9,7 @@
     "express": "^4.16.4",
     "knex": "^0.16.3",
     "mysql": "^2.16.0",
+    "nodemon": "^1.18.9",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-router-dom": "^4.3.1",
@@ -20,7 +21,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-
   "eslintConfig": {
     "extends": "react-app"
   },
