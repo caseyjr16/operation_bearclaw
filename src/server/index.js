@@ -25,7 +25,7 @@ connection.connect(err => {
 app.use(cors());
 
 
-console.log(connection)
+
 
 app.get('/', (req, res) =>{
     res.send('Hello Casey and Mason. Go to /users to see users')

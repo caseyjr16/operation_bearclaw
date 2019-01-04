@@ -48,25 +48,35 @@ export default class SignUp extends Component{
         this.setState({password: event.target.value});
     }
 
+onSubmit(e){
+    e.preventDefault()
 
+    const users = {
+        firstname: this.state.firstName,
+        lastName: this.state.lastName,
+        email: this.state.email,
+        password: this.state.password
+    }
+}
     render(){
         return(
             <div className="App"  class="background">
             <header className="App-header">
-
+            <form onSubmit={this.handleSubmit} method="POST">
             <h1>Sign Up!</h1>
             <label>
-                <input type="text" value={this.state.firstName} onChange={this.handleFirstChange} placeholder="First Name" />
+                <input type="text" value={this.state.firstName} onChange={this.handleFirstChange} name="firstName" placeholder="First Name" />
                 <br></br>
-                <input type="text" value={this.state.lastName} onChange={this.handleLastChange} placeholder="Last Name" />
+                <input type="text" value={this.state.lastName} onChange={this.handleLastChange} name="lastname" placeholder="Last Name" />
                 <br></br>
-                <input type="email" value={this.state.email} onChange={this.handleEmailChange} placeholder="email" />
+                <input type="email" value={this.state.email} onChange={this.handleEmailChange} name="email" placeholder="email" />
                 <br></br>
-                <input type="password" value={this.state.password} onChange={this.handlePasswordChange} placeholder="Password" />
+                <input type="password" value={this.state.password} onChange={this.handlePasswordChange} name="password" placeholder="Password" />
                 <br></br>
                 
-                <Button class="button" variant="contained" onClick={this.handleSubmit}>Sign Up!</Button>
+                <Button type="submit" class="button" variant="contained" onClick={this.handleSubmit}>Sign Up!</Button>
             </label>
+            </form>
             </header>
             </div>
 
