@@ -29,7 +29,23 @@ export default class SignUp extends Component{
             password: this.state.password
         }
         console.log(data)
-        event.preventDefault();
+        fetch("/users/new", {
+            method: 'POST', 
+            headers: {'Content-Type': 'application/json'},
+            body:JSON.stringify(data)
+        }).then(function(response){
+            if(response.status>=400){
+                throw new Error("Bad response from server");
+            }
+            return response.json();
+        }).then(function(data) {
+            console.log(data)
+            if(data == "success"){
+                this.setState({msg: "Thanks for registering"})
+            }
+        }).catch(function(err){
+            console.log(err)
+        });
     }
     
     handleFirstChange(event){
@@ -48,16 +64,7 @@ export default class SignUp extends Component{
         this.setState({password: event.target.value});
     }
 
-onSubmit(e){
-    e.preventDefault()
 
-    const users = {
-        firstname: this.state.firstName,
-        lastName: this.state.lastName,
-        email: this.state.email,
-        password: this.state.password
-    }
-}
     render(){
         return(
             <div className="App"  class="background">
@@ -67,7 +74,7 @@ onSubmit(e){
             <label>
                 <input type="text" value={this.state.firstName} onChange={this.handleFirstChange} name="firstName" placeholder="First Name" />
                 <br></br>
-                <input type="text" value={this.state.lastName} onChange={this.handleLastChange} name="lastname" placeholder="Last Name" />
+                <input type="text" value={this.state.lastName} onChange={this.handleLastChange} name="lastName" placeholder="Last Name" />
                 <br></br>
                 <input type="email" value={this.state.email} onChange={this.handleEmailChange} name="email" placeholder="email" />
                 <br></br>

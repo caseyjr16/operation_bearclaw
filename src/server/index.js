@@ -25,8 +25,6 @@ connection.connect(err => {
 app.use(cors());
 
 
-
-
 app.get('/', (req, res) =>{
     res.send('Hello Casey and Mason. Go to /users to see users')
 });
@@ -44,6 +42,6 @@ app.get('/users', (req, res) => {
     });
 });
 
-app.listen(4000, ()=> {
-    console.log('Server is listening on port 4000...')
+app.listen(3001, ()=> {
+    console.log('Server is listening on port 3001...')
 })
