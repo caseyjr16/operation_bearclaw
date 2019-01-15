@@ -40,7 +40,7 @@ export default class SignUp extends Component{
             return response.json();
         }).then(function(data) {
             console.log(data)
-            if(data == "success"){
+            if(data === "success"){
                 this.setState({msg: "Thanks for registering"})
             }
         }).catch(function(err){
@@ -69,7 +69,7 @@ export default class SignUp extends Component{
         return(
             <div className="App"  class="background">
             <header className="App-header">
-            <form onSubmit={this.handleSubmit} method="POST">
+            <form onSubmit={this.handleSubmit} method="POST" action="/submit">
             <h1>Sign Up!</h1>
             <label>
                 <input type="text" value={this.state.firstName} onChange={this.handleFirstChange} name="firstName" placeholder="First Name" />

@@ -1,10 +1,12 @@
 
 const express = require('express');
-const cors = require('cors');
 const mysql = require('mysql');
-
-
+const router = express.Router();
 const app = express();
+
+
+app.use('/', router);
+
 
 const SELECT_ALL_USERS_QUERY = 'SELECT * FROM users';
 
@@ -22,7 +24,7 @@ connection.connect(err => {
     }
 });
 
-app.use(cors());
+
 
 
 app.get('/', (req, res) =>{
@@ -42,7 +44,23 @@ app.get('/users', (req, res) => {
     });
 });
 
+router.get('/casey', (req, res) => {
+    res.send("Hello, Casey!")
+})
+
+router.post('/submit', function(req, res, next) {
+    res.redirect('/index.html');
+})
+
+router.post('/new', function(req, res, next) {
+    res.locals.connection.query('insert into users(firstname,lastname,email) values(','+req.body.firstname+',',','+req.body.lastname+',',','+req.body.email+',')', function (error, results, fields) {
+        if(error) throw error;
+        res.send(JSON.stringify(results));
+    });
+});
 
 app.listen(3001, ()=> {
     console.log('Server is listening on port 3001...')
 })
+
+module.exports = router;
