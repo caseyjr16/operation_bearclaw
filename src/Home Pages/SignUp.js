@@ -29,7 +29,7 @@ export default class SignUp extends Component{
             password: this.state.password
         }
         console.log(data)
-        fetch("/users/new", {
+        fetch("/users", {
             method: 'POST', 
             headers: {'Content-Type': 'application/json'},
             body:JSON.stringify(data)

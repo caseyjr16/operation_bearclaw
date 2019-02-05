@@ -17,6 +17,8 @@ const connection = mysql.createConnection({
     database: 'studentAccounts'
 });
 
+//connect to the database
+
 
 connection.connect(err => {
     if(err){
@@ -24,7 +26,17 @@ connection.connect(err => {
     }
 });
 
+//Listen to POST requests to /users
+app.post('/users', function(req, res){
+    //Get sent data. 
+    var user = req.body;
+    //Do a MySQL query.
+    var query = connection.query('INSERT INTO uesrs SET ?', user, function(err, result){
 
+    });
+    res.end('Success');
+
+});
 
 
 app.get('/', (req, res) =>{
