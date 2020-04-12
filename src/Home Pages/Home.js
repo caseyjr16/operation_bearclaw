@@ -53,6 +53,6 @@ export default class Home extends Component{
         );
     }
 
-    
+    //Alright this homepage will be completed at some point!
     
 }
