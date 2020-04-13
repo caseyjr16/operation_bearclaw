@@ -44,7 +44,7 @@ export default class SignIn extends Component{
             <label>
                 <input type="text" value={this.state.username} onChange={this.handleUserChange} placeholder="UserName" />
                 <br></br>
-                <input type="text" value={this.state.password} onChange={this.handlePasswordChange} placeholder="Password" />
+                <input type="password" value={this.state.password} onChange={this.handlePasswordChange} placeholder="Password" />
                 <br></br>
             </label>
             <Button class="button" variant="contained" onClick={this.handleSubmit}>Submit!</Button>
